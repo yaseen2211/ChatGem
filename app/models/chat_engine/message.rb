@@ -7,7 +7,7 @@ module ChatEngine
     
     has_attached_file :document
     validates_attachment :document,
-    content_type: { content_type: ["application/pdf",'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', "image/jpeg", "image/gif", "image/png", "image/jpg", "image/bmp"] }
+    content_type: { content_type: ["application/pdf",'application/docx',"image/jpeg", "image/gif", "image/png", "image/jpg"] }
   
     def jobs
       MessageSendingJob.perform_later(self)

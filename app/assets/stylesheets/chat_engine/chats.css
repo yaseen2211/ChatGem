@@ -57,7 +57,7 @@
   margin : 0 20px 10px 0;
   clear : both;
   color : #FFFFFF;
-  background-color : #00B5B8;
+  background-color : #135997;
   border-radius : 4px;
 }
 .chat-application .chats .chat-body .chat-content:before {
@@ -68,7 +68,7 @@
   height : 0;
   content : '';
   border : 5px solid transparent;
-  border-left-color : #00B5B8;
+  border-left-color : #135997;
 }
 .chat-application .chats .chat-body .chat-content + .chat-content:before {
   border-color : transparent;
@@ -177,7 +177,7 @@
   display : table-cell;
 }
 .avatar img {
-  width : 100%;
+  width : 84%;
   max-width : 100%;
   height : auto;
   border : 0 none;
@@ -234,13 +234,13 @@ html body .content .content-wrapper {
 }
 .btn-primary {
     border-color: #00A5A8 !important;
-    background-color: #00B5B8 !important;
+    background-color: #135997 !important;
     color: #FFFFFF;
 }
 
 
 .media-list .media {
-  padding : 1.25rem;
+  padding : 0.38rem;
   margin-top : 0;
 }
 .media-list .media .media-left {
@@ -318,10 +318,10 @@ border-radius:5px;
 }
 /**************ADD FORM ***************/
 .answer-add {
-    border: 1px solid #00B5B8;
+    border: 1px solid #135997;
     clear: both;
     margin: 0px;
-    padding: 10px 20px;
+    padding: 25px 20px;
     background: #fff;
     bottom: 0px;
     width: 100%;
@@ -339,7 +339,7 @@ border-radius:5px;
     font-size: 16px;
     line-height: 20px;
     padding: 0;
-    color: #00B5B8;
+    color: #135997;
 }
  .chat textarea {
     -webkit-appearance: none;
@@ -353,7 +353,7 @@ border-radius:5px;
     font-weight: 400;
     text-decoration: inherit;
 /*--adjust as necessary--*/
-    color: #00B5B8;
+    color: #135997;
     font-size: 22px;
     padding-right: 0.5em;
     position: absolute;
@@ -396,7 +396,7 @@ border-radius:5px;
 }
 
 .answer-add textarea::-webkit-input-placeholder {
-   color: #00B5B8;
+   color: #6c757d;
 }
 
 .answer-add textarea:-moz-placeholder {  
@@ -425,9 +425,9 @@ border-radius:5px;
 }
 
 .chat-name {
-  background: #fff;
-  padding: 10px 10px 5px 10px;
-  border: 1px solid #00B5B8;
+  background: #135997;
+  padding: 0px 16px 3px 14px;
+  border: 1px solid #135997;
 }
 .nodata_list {
     padding: 0 !important;

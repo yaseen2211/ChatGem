@@ -6,11 +6,18 @@ module ChatEngine
     authorize_resource
     # GET /chats
     def index
-      @chats = Chat.all
+      @chats = current_user.chats
+      @message = Message.new
+      if @chats.present?
+        @chat = @chats.first
+        @messages = @chat.messages.order('created_at ASC')
+        @messages.where.not(sender: current_user).update_all(read: true)
+      end
     end
 
     # GET /chats/1
     def show
+      @chats = current_user.chats
       @messages = @chat.messages.order('created_at ASC')
       @message = Message.new
       @messages.where.not(sender: current_user).update_all(read: true)

@@ -3,7 +3,7 @@
       <%= f.hidden_field :sender_type, value: current_user.class.to_s %>
         <%= f.hidden_field :sender_id, value: current_user.id %>
         <%= token_tag form_authenticity_token %>
-      <%= f.text_area :content, placeholder:"Write a message", autocomplete:"off", id:"message-body" %>
+      <%= f.text_area :content, placeholder:"Write a message... \n(You can upload .pdf,.jpg,.jpeg file from here.)", autocomplete:"off", id:"message-body"%>
       
       <div class="answer-btn answer-btn-1"></div>
       
