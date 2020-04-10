@@ -13,7 +13,7 @@
               <%# ative_subscriber_ids = current_user.chats.get_active_subscriber_ids(current_user)%>
               <%# remaining_subscriber_ids = ChatEngine::ChatSubscriber.get_except_array(ative_subscriber_ids ) %>
               <%# User.where(id: remaining_subscriber_ids).each do |user| %>
-              <% User.where.not(id: current_user.id).each do |user| %>
+              <% users.each do |user| %>
                 <li class="li-style">
                   <a href="<%= chats_path({user_type: user.class.to_s,user_id: user.id }) %>" data-method="post" class="media border-0">
                     <div class="media-left pr-1">

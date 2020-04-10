@@ -3,10 +3,13 @@ require_dependency "chat_engine/application_controller"
 module ChatEngine
   class ChatsController < ApplicationController
     before_action :set_chat, only: [:show, :edit, :update, :destroy]
+    before_action :get_users, only: [:show, :index]
+
     authorize_resource
     # GET /chats
     def index
       @chats = current_user.chats
+
       @message = Message.new
       if @chats.present?
         @chat = @chats.first
@@ -85,6 +88,14 @@ module ChatEngine
 
     private
       # Use callbacks to share common setup or constraints between actions.
+
+      def get_users
+        @users =  User.all_except(current_user)
+        if current_user.present? && current_user.is_external?
+          @users = @users.only_internals
+        end
+      end
+
       def set_chat
         @chat = Chat.find(params[:id])
       end
