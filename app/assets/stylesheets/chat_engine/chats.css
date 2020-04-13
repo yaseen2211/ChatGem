@@ -2,7 +2,10 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-
+body {
+    padding-bottom: 0px !important;
+    overflow-x: hidden;
+}
 .chat-application .app-content, .chat-application .content-right, .chat-application .content-wrapper, .chat-application .content-body {
   height : 95vh;
 }
@@ -177,7 +180,7 @@
   display : table-cell;
 }
 .avatar img {
-  width : 84%;
+  width : 93%;
   max-width : 100%;
   height : auto;
   border : 0 none;
@@ -228,7 +231,6 @@ html body .content .content-wrapper {
   padding : 1.8rem;
 }
 .sidebar-fixed {
-  position : fixed;
   height : 100%;
   overflow : scroll;
 }
@@ -323,7 +325,7 @@ border-radius:5px;
     margin: 0px;
     padding: 25px 20px;
     background: #fff;
-    bottom: 0px;
+    bottom: 49px;
     width: 100%;
     position: relative;
 }
@@ -425,7 +427,7 @@ border-radius:5px;
 }
 
 .chat-name {
-  background: #135997;
+  background: #ffff;
   padding: 0px 16px 3px 14px;
   border: 1px solid #135997;
 }
@@ -437,4 +439,8 @@ border-radius:5px;
     list-style: none;
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.general-notice {
+  display: none;
 }
